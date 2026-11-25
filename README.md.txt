@@ -1,99 +1,179 @@
 # Retail Sales Analysis using PostgreSQL and Power BI
 
-## 1. Project Overview
+## Project Overview
 
-This project focuses on analyzing Brazilian E-Commerce sales data to understand business performance, customer purchasing patterns, sales trends, and product performance.
+This project focuses on analyzing Brazilian E-Commerce sales data to understand business performance, customer purchasing patterns, monthly sales trends, and product performance.
 
-PostgreSQL was used for database management and SQL-based data analysis, while Microsoft Power BI was used to create an interactive dashboard for business insights.
+In this project, I used PostgreSQL for database management and SQL queries, and Microsoft Power BI to create an interactive dashboard for visualizing sales data and generating business insights.
 
-## 2. Project Objectives
+## Project Objectives
 
-- Analyze overall sales performance.
+- Analyze overall e-commerce sales performance.
 - Identify monthly sales trends.
-- Understand state-wise sales performance.
-- Identify top-selling product categories.
-- Analyze the best-performing products.
-- Create an interactive dashboard for business analysis.
+- Analyze state-wise sales performance.
+- Identify top-performing product categories.
+- Find the top 5 products based on sales value.
+- Create an interactive Power BI dashboard.
+- Present meaningful business insights using data visualization.
 
-## 3. Tools and Technologies
+## Tools and Technologies Used
 
-- **PostgreSQL** – Database management and SQL queries.
-- **Microsoft Power BI** – Data visualization and dashboard development.
-- **SQL** – Data extraction, aggregation, and analysis.
-- **DAX** – Creating calculated measures and KPIs.
+| Tool | Purpose |
+|---|---|
+| PostgreSQL | Database management |
+| SQL | Data extraction and analysis |
+| Microsoft Power BI | Dashboard development |
+| DAX | KPI calculations and measures |
+| Excel / CSV | Dataset files and data handling |
 
-## 4. Dataset Description
+## Dataset Information
 
-The project uses the Brazilian E-Commerce (Olist) dataset.
+**Dataset Name:** Brazilian E-Commerce Public Dataset by Olist
 
-The database includes the following tables:
+**Dataset Source:** Kaggle
 
-- Customers
-- Orders
-- Order Items
-- Products
-- Sellers
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
-These tables provide information about customers, orders, products, sellers, and sales transactions.
+The dataset contains information about Brazilian e-commerce orders, customers, products, sellers, and order items.
 
-## 5. Project Implementation
+The dataset was downloaded and used locally for this project. The original dataset files are not included in this repository.
 
-### Step 1: Database Management
-- Created and connected the PostgreSQL database.
-- Imported the e-commerce dataset.
-- Organized the data into relational tables.
+### Main Database Tables
 
-### Step 2: SQL Analysis
-- Used SQL queries to analyze sales data.
-- Calculated total sales and order counts.
-- Analyzed sales by month, state, and product category.
-- Identified top-performing products.
+- customers
+- orders
+- order_items
+- products
+- sellers
 
-### Step 3: Power BI Dashboard
-- Connected Power BI to PostgreSQL.
-- Imported the required tables.
-- Created table relationships.
-- Developed KPI cards and interactive visualizations.
-- Added slicers for interactive filtering.
+## Project Workflow
 
-## 6. Dashboard Features
+### Step 1: Database Creation and Data Import
 
-The Power BI dashboard includes:
+- Created a PostgreSQL database for retail sales analysis.
+- Imported the Olist dataset into PostgreSQL.
+- Organized the data into separate relational tables.
+- Checked the imported tables.
 
-1. Total Sales
-2. Total Orders
-3. Average Order Value
-4. Monthly Sales Trend
-5. Top 10 States by Sales
-6. Top 5 Products by Sales
-7. Top 5 Product Categories by Sales
-8. Interactive State Slicer
+### Step 2: SQL Data Analysis
 
-## 7. Key Business Insights
+Used SQL queries to analyze the e-commerce data.
 
-The dashboard helps identify:
+The analysis included:
 
-- Monthly changes in sales performance.
+- Total sales calculation.
+- Total order count.
+- Average order value.
+- Monthly sales analysis.
+- State-wise sales analysis.
+- Product category analysis.
+- Top-selling product analysis.
+
+### Step 3: Power BI Connection
+
+- Connected Microsoft Power BI to PostgreSQL.
+- Imported the required database tables.
+- Created relationships between the tables.
+- Prepared the data for visualization.
+
+### Step 4: DAX Measures
+
+Created measures to calculate important business KPIs:
+
+- Total Sales
+- Total Orders
+- Average Order Value
+
+### Step 5: Dashboard Development
+
+Developed an interactive Power BI dashboard using KPI cards, charts, and slicers.
+
+## Dashboard Preview
+
+![Retail Sales Analysis Dashboard](dashboard_screenshot.png)
+
+## Dashboard Features
+
+### 1. Total Sales
+Displays the overall sales value.
+
+### 2. Total Orders
+Shows the total number of orders.
+
+### 3. Average Order Value
+Displays the average sales value per order.
+
+### 4. Monthly Sales Trend
+Shows how sales change over different months.
+
+### 5. Top 10 States by Sales
+Identifies the states contributing the highest sales.
+
+### 6. Top 5 Product Categories by Sales
+Highlights the top-performing product categories.
+
+### 7. Top 5 Products by Sales
+Displays the five products with the highest sales value based on the sum of item prices.
+
+### 8. Interactive State Slicer
+Allows users to select a state and dynamically filter the dashboard visuals.
+
+## Key Dashboard Results
+
+The following KPI values were displayed in my Power BI dashboard:
+
+| KPI | Value |
+|---|---:|
+| Total Sales | 13.59M |
+| Total Orders | 96K |
+| Average Order Value | 137.04 |
+
+*Values are based on the dashboard screenshot and may change with filters.*
+
+## Business Insights
+
+The dashboard helps understand:
+
+- Overall e-commerce sales performance.
+- Monthly sales patterns and changes.
 - States contributing the highest sales.
 - Product categories generating higher sales.
 - Products with the highest sales value.
-- Overall e-commerce sales performance.
+- How business performance changes when different states are selected.
 
-## 8. Project Files
+## Project Files
 
-- `sales_queries.sql` – SQL queries used for data analysis.
-- `Retail_Sales_Analysis.pbix` – Power BI dashboard file.
-- `README.md` – Project documentation.
-- `dashboard_screenshot.png` – Dashboard screenshot (to be added).
+| File | Description |
+|---|---|
+| Retail_Sales_Analysis.pbix | Power BI dashboard |
+| sales_queries.sql | SQL analysis queries |
+| README.md | Project information |
+| Retail_Sales_Analysis_Documentation.pdf | Detailed project documentation |
+| dashboard_screenshot.png | Dashboard preview |
 
-## 9. Conclusion
+## Skills Gained
 
-This project provided practical experience in PostgreSQL, SQL querying, data analysis, and Power BI dashboard development.
+Through this project, I gained practical experience in:
 
-It demonstrates how raw e-commerce data can be transformed into meaningful business insights through database management and interactive data visualization.
+- PostgreSQL database management.
+- SQL querying and data aggregation.
+- Connecting PostgreSQL with Power BI.
+- Data modeling and table relationships.
+- DAX measures.
+- Data visualization.
+- Interactive dashboard development.
+- Business data analysis.
 
-## 10. Author
+## Conclusion
+
+This project helped me understand how to work with real-world e-commerce data using PostgreSQL, SQL, and Power BI.
+
+I learned how to manage database tables, write SQL queries, calculate business KPIs, create interactive visualizations, and analyze sales performance.
+
+The final dashboard presents sales information in a simple and interactive way, helping users understand business performance and make data-driven decisions.
+
+## Author
 
 **Divyabala**
 
-Skills: SQL | PostgreSQL | Microsoft Power BI | Data Analysis
+Aspiring Data Analyst | Python | SQL | PostgreSQL | Power BI
